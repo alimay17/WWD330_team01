@@ -14,25 +14,47 @@
 
     </div>
     <button id="submit">Submit</button>
+    <div>
+        <input type="text" id="num01">
+        <input type="text" id="num02">
+        <button id="addButton" >Add Together</button>
+        <div id="addDisplay"></div>
+    </div>
 </body>
 
 <script>
-    function getInput() {
-        const myValue = document.getElementById('number').value;
-        sum_numbers(myValue);
+    function getInput2() {
+        const num01 = parseInt(document.getElementById('num01').value);
+        const num02 = parseInt(document.getElementById('num02').value);
+
+        add_numbers(num01, num02);
     }
 
-    function sum_numbers(input) {
+    function getInput() {
+        const myValue = parseInt(document.getElementById('number').value);
+        return myValue;
+    }
+
+    function sum_numbers(getInput) {
+        const input = getInput();
         let total = 0;
         let i = 0;
         while (i <= input) {
             total += i;
             i++;
         }
-        document.getElementById('display').innerHTML = total;
+        document.getElementById('display').innerText = total;
     }
-    let myButton = document.getElementById('submit');
-    myButton.addEventListener('click', getInput);
+
+    function add_numbers(num01, num02) {
+        const sum = num01 + num02;
+        document.getElementById('addDisplay').innerText = sum;
+    }
+    const myButton = document.getElementById('submit');
+    const addButton = document.getElementById('addButton');
+
+    myButton.addEventListener('click', () => sum_numbers(getInput));
+    addButton.addEventListener('click', getInput2);
 </script>
 
 </html>
