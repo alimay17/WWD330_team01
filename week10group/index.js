@@ -10,7 +10,8 @@ import QuakesController from './QuakesController.js';
 //   // use the url to request the correct quakes 
 //   //log out the quakes for now.
 // }
+//getQuakesForLocation();
 
 
 let controller = new QuakesController("#quakeList");
-controller.init();getQuakesForLocation();
+controller.init();

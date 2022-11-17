@@ -79,9 +79,7 @@ async function initPos() {
 
 async function getQuakesForLocation(loc) {
     const radius = 100;
-    const query =
-    baseUrl +
-    `&latitude=${loc.latitude}&longitude=${loc.longitude}&maxradiuskm=${radius}`;
+    const query = baseUrl + `&latitude=${loc.latitude}&longitude=${loc.longitude}&maxradiuskm=${radius}`;
     return await getJSON(query);
 }
 
