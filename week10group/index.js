@@ -13,4 +13,5 @@ import QuakesController from './QuakesController.js';
 
 
 let controller = new QuakesController("#quakeList");
-controller.init();getQuakesForLocation();
+controller.init();
+//getQuakesForLocation();
